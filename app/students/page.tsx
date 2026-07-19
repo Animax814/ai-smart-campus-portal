@@ -3,6 +3,8 @@ import Link from "next/link";
 import { getStudents } from "@/lib/students";
 import { Plus, Search } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function StudentsPage() {
   const students = await getStudents();
 
