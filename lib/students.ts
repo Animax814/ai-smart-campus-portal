@@ -11,6 +11,18 @@ export async function getStudents() {
   return data;
 }
 
+export async function getStudentById(id: string) {
+  const { data, error } = await supabase
+    .from("students")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  if (error) throw error;
+
+  return data;
+}
+
 export async function deleteStudent(id: string) {
   const { error } = await supabase
     .from("students")

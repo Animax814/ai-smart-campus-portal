@@ -1,15 +1,16 @@
 import Sidebar from "./Sidebar";
 import Header from "./Header";
-
-interface DashboardLayoutProps {
-  children: React.ReactNode;
-}
+import AnimatedBackground from "./AnimatedBackground";
 
 export default function DashboardLayout({
   children,
-}: DashboardLayoutProps) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="flex min-h-screen bg-slate-100">
+    <div className="flex min-h-screen text-white">
+      <AnimatedBackground />
+
       <Sidebar />
 
       <div className="flex-1">
